@@ -1,10 +1,33 @@
 :root {
-  --font-family-base: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  --font-family-title: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --color-primary: #d73953;
+  --color-black: #090909;
+  --color-white: #ffffff;
+  --color-light-grey: #f3f3f3;
+  --color-dark-grey: #353535;
+  --text-color: var(--color-black);
+  --font-family-base: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  --font-family-title: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
 }
 
 body {
-  font-family: var(--font-family-base); /* Set body's font-family to var(--font-family-base) */
+  color: var(--text-color);
+  font-family: var(--font-family-base);
+}
+
+a {
+  color: var(--text-color);
+}
+
+.visually-hidden {
+  display: none;
+}
+
+.card-category {
+  color: var(--color-primary);
+}
+
+.section-tagline {
+  color: var(--color-primary);
 }
 
 h1,
@@ -13,21 +36,5 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--font-family-title); /* Set font-family for all 6 levels of section headings to var(--font-family-title) */
-}
-
-a {
-  color: var(--text-color); /* Set the foreground color of all anchor elements to var(--text-color) */
-}
-
-.visually-hidden {
-  display: none; /* Set the display property of elements with the class visually-hidden to none */
-}
-
-.card-category {
-  color: var(--color-primary); /* Set the foreground color of elements with the class card-category to var(--color-primary) */
-}
-
-.section-tagline {
-  color: var(--color-primary); /* Set the foreground color of elements with the class section-tagline to var(--color-primary) */
+  font-family: var(--font-family-title);
 }
