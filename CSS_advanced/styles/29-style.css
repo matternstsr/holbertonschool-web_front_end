@@ -1,62 +1,127 @@
-/* Define custom properties */
+/* Define custom CSS variables for color, typography, and layout */
 :root {
-    --header-padding: 4rem 0 0;          /* Define padding for the header */
-    --header-logo-position: relative;    /* Define position for the header logo */
-    --header-logo-link-display: inline-block; /* Define display for the logo link */
-    --header-logo-link-position: absolute;   /* Define position for the logo link */
-    --header-logo-link-top: -1rem;       /* Define vertical position for the logo link */
-    --header-logo-link-left: 0;          /* Define horizontal position for the logo link */
-    --nav-link-hover-color: white;      /* New custom property for nav-link hover color */
-  }
-  
-  /* Create a header class selector */
-  .header {
-    padding: var(--header-padding);      /* Apply padding using custom property */
-  }
-  
-  /* Create a header-logo class selector */
-  .header-logo {
-    position: var(--header-logo-position);  /* Apply position using custom property */
-  }
-  
-  /* Target the link inside the header-logo class */
-  .header-logo a {
-    display: var(--header-logo-link-display);   /* Apply display using custom property */
-    position: var(--header-logo-link-position); /* Apply position using custom property */
-    top: var(--header-logo-link-top);           /* Apply vertical position using custom property */
-    left: var(--header-logo-link-left);         /* Apply horizontal position using custom property */
-  }
-  
-  /* Add the section-hero selector and set the size of the background using 2-value syntax */
-  .section-hero {
-    width: 90rem;     /* Set the width of the section-hero */
-    height: auto;     /* Set the height of the section-hero */
-  }
-  
-  /* Target the section-title inside the section-hero and add 5rem of margin to the bottom */
-  .section-hero .section-title {
-    margin-bottom: 5rem;  /* Apply margin to the section-title */
-  }
-  
-  /* Target the section-inner inside the section-hero and add padding */
-  .section-hero .section-inner {
-    padding: 10rem 40rem 2rem 0;  /* Apply padding to the section-inner */
-  }
-  
-  /* Target the before pseudo-elements of nav-link that is inside the nav */
-  nav .nav-link::before {
-    content: "";          /* Empty content for the before pseudo-element */
-    position: absolute;   /* Absolutely position the targeted element */
-    top: 0;               /* Set the vertical position to 0 */
-    left: 0;              /* Set the horizontal position to 0 */
-    background-color: var(--nav-link-hover-color); /* Set the background color */
-    width: 0;             /* Set the width to 0 */
-    height: 20%;          /* Set the height to 20% of the root element value */
-  }
-  
-  /* Target the before pseudo-elements of nav-link when nav-item is hover and is inside nav */
-  nav .nav-item:hover .nav-link::before {
-    background-color: var(--color-primary); /* Set the background color to the variable color-primary */
-    width: 100%;                             /* Set the width to 100% */
-  }
-  
+    --color-primary: #d73953;
+    --color-black: #090909;
+    --color-white: #ffffff;
+    --color-light-grey: #f3f3f3;
+    --color-dark-grey: #353535;
+    --text-color: var(--color-black); /* Set text color */
+    --font-family-base: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; /* Base font family */
+    --font-family-title: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif; /* Title font family */
+    /* Define various font sizes and styles */
+    --font-size-small: 1.2rem;
+    --font-size-medium: 1.6rem;
+    --font-size-large: 1.8rem;
+    --font-size-x-large: 2.3rem;
+    --font-size-xx-large: 4.8rem;
+    --font-weight-regular: 400;
+    --font-weight-bold: 700;
+    /* Define line heights */
+    --line-height-small: 1.2;
+    --line-height-base: 1.5;
+    --line-height-big: 1.8;
+    /* Define various section and header styles */
+    --section-header-align: center;
+    --section-tagline-transform: uppercase;
+    --section-title-margin: 0;
+    --section-title-color: var(--color-black);
+    --section-padding: 5rem 0;
+    --section-header-padding: 0 0 3rem;
+    --section-body-padding: 0 0 3rem;
+    --section-footer-padding: 3rem 0 0;
+    --section-footer-align: center;
+    --footer-padding: 5rem 0 1rem;
+    /* Define navigation item styles */
+    --nav-item-font-family: var(--font-family-title);
+    --nav-item-font-weight: var(--font-weight-bold);
+    --nav-item-font-size: var(--font-size-medium);
+    --nav-item-letter-spacing: 0.04rem;
+    --nav-item-display: inline-block;
+    --nav-item-margin: 0 0 3rem 0;
+    --nav-item-link-hover: var(--color-white);
+    /* Define button styles */
+    --button-display: inline-block;
+    --button-padding: 1.5rem 3rem;
+    --button-border: 0.2rem solid var(--color-primary);
+    --button-color: var(--color-black);
+    --button-text-decoration: none;
+    --button-font-size: var(--font-size-large);
+    --button-hover-color: var(--color-white);
+    --button-hover-text-decoration: none;
+    --button-hover-background: var(--color-primary);
+    /* Define header styles */
+    --header-padding: 4rem 0 0;
+    --header-logo-position: relative;
+    --header-logo-link-display: inline-block;
+    --header-logo-link-position: absolute;
+    --header-logo-link-top: -1rem;
+    --header-logo-link-left: 0;
+}
+
+/* Apply box-sizing: border-box to all elements */
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+/* Set smooth scrolling behavior and adjust font size for the root HTML element */
+html {
+    scroll-behavior: smooth;
+    font-size: 62.5%; /* 1rem = 10px for easier calculations */
+}
+
+/* Define base styles for the entire document */
+body {
+    color: var(--text-color);
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-medium);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-base);
+}
+
+/* Style the header section */
+.header {
+    padding: var(--header-padding);
+}
+
+/* Style the header logo */
+.header-logo {
+    position: var(--header-logo-position);
+}
+
+.header-logo a {
+    display: var(--header-logo-link-display);
+    position: var(--header-logo-link-position);
+    top: var(--header-logo-link-top);
+    left: var(--header-logo-link-left);
+}
+
+/* Define styles for the dark theme */
+[data-section-theme="dark"] {
+    --text-color: var(--color-white); /* Update text color for dark theme */
+    --section-title-color: var(--color-white); /* Update section title color for dark theme */
+    background-color: var(--color-black); /* Set background color for dark theme */
+    --button-color: var(--color-white); /* Update button text color for dark theme */
+}
+
+/* Style the navigation menu */
+.navbar-menu {
+    float: right;
+}
+
+/* Style the navigation list */
+.nav {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-align: center;
+}
+
+/* Style navigation items */
+.nav .nav-item {
+    font-family: var(--nav-item-font-family);
+    font-weight: var(--nav-item-font-weight);
+    font-size: var(--nav-item-font-size);
+    letter-spacing: var(--nav-item-letter-spacing);
+    display: var(--nav-item-display);
+    margin: var(--nav-item-margin);
+}
