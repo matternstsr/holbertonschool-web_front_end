@@ -1,0 +1,44 @@
+/* Define custom properties */
+:root {
+    --header-padding: 4rem 0 0;          /* Define padding for the header */
+    --header-logo-position: relative;    /* Define position for the header logo */
+    --header-logo-link-display: inline-block; /* Define display for the logo link */
+    --header-logo-link-position: absolute;   /* Define position for the logo link */
+    --header-logo-link-top: -1rem;       /* Define vertical position for the logo link */
+    --header-logo-link-left: 0;          /* Define horizontal position for the logo link */
+  }
+  
+  /* Create a header class selector */
+  .header {
+    padding: var(--header-padding);      /* Apply padding using custom property */
+  }
+  
+  /* Create a header-logo class selector */
+  .header-logo {
+    position: var(--header-logo-position);  /* Apply position using custom property */
+  }
+  
+  /* Target the link inside the header-logo class */
+  .header-logo a {
+    display: var(--header-logo-link-display);   /* Apply display using custom property */
+    position: var(--header-logo-link-position); /* Apply position using custom property */
+    top: var(--header-logo-link-top);           /* Apply vertical position using custom property */
+    left: var(--header-logo-link-left);         /* Apply horizontal position using custom property */
+  }
+  
+  /* Add the section-hero selector and set the size of the background using 2-value syntax */
+  .section-hero {
+    width: 90rem;
+    height: auto;
+  }
+  
+  /* Target the section-title inside the section-hero and add 5rem of margin to the bottom */
+  .section-hero .section-title {
+    margin-bottom: 5rem;
+  }
+  
+  /* Target the section-inner inside the section-hero and add padding */
+  .section-hero .section-inner {
+    padding: 10rem 40rem 2rem 0;
+  }
+  
