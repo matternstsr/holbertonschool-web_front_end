@@ -1,59 +1,71 @@
-/* Root Variables */
 :root {
-    --color-primary: #d73953; /* Primary color */
-    --color-black: #090909;  /* Black color */
-    --color-white: #ffffff;  /* White color */
-    --color-light-grey: #f3f3f3; /* Light grey color */
-    --color-dark-grey: #353535;   /* Dark grey color */
-    --text-color: var(--color-black); /* Text color */
-    --font-family-base: Open Sans, Helvetica Neue, Helvetica, Arial, sans-serif; /* Base font family */
-    --font-family-title: Raleway, Helvetica Neue, Helvetica, Arial, sans-serif; /* Title font family */
-    --font-size-small: 1.2rem; /* Small font size */
-    --font-size-medium: 1.6rem; /* Medium font size */
-    --font-size-large: 1.8rem; /* Large font size */
-    --font-size-x-large: 2.3rem; /* Extra large font size */
-    --font-size-xx-large: 4.8rem; /* Extra extra large font size */
-    --font-weight-regular: 400; /* Regular font weight */
-    --font-weight-bold: 700; /* Bold font weight */
-    --line-height-small: 1.2; /* Small line height */
-    --line-height-base: 1.5; /* Base line height */
-    --line-height-big: 1.8; /* Big line height */
-    --section-header-align: center; /* Section header alignment */
-    --section-tagline-transform: uppercase; /* Section tagline transformation */
-    --section-title-margin: 0; /* Section title margin */
-    --section-title-color: var(--color-black); /* Section title color */
-    --section-padding: 5rem 0; /* Section padding */
-    --section-header-padding: 0 0 3rem; /* Section header padding */
-    --section-body-padding: 0 0 3rem; /* Section body padding */
-    --section-footer-padding: 3rem 0 0; /* Section footer padding */
-    --section-footer-align: center; /* Section footer alignment */
-    --footer-padding: 5rem 0 1rem; /* Footer padding */
-    --nav-item-font-family: var(--font-family-title); /* Navigation item font family */
-    --nav-item-font-weight: var(--font-weight-bold); /* Navigation item font weight */
-    --nav-item-font-size: var(--font-size-medium); /* Navigation item font size */
-    --nav-item-letter-spacing: 0.04rem; /* Navigation item letter spacing */
-    --nav-item-display: inline-block; /* Navigation item display */
-    --nav-item-margin: 0 0 3rem 0; /* Navigation item margin */
-    --nav-item-link-hover: var(--color-white); /* Navigation item link hover color */
-    --section-tagline-margin: 0; /* Section tagline margin */
-    --button-display: inline-block; /* Button display */
-    --button-padding: 1.5rem 3rem; /* Button padding */
-    --button-border: 0.2rem solid var(--color-primary); /* Button border */
-    --button-color: var(--color-black); /* Button color */
-    --button-text-decoration: none; /* Button text decoration */
-    --button-font-size: var(--font-size-large); /* Button font size */
-    --button-hover-color: var(--color-white); /* Button hover color */
-    --button-hover-text-decoration: none; /* Button hover text decoration */
-    --button-hover-background: var(--color-primary); /* Button hover background */
-    --header-padding: 4rem 0 0; /* Header padding */
-    --header-logo-position: relative; /* Header logo position */
-    --header-logo-link-display: inline-block; /* Header logo link display */
-    --header-logo-link-position: absolute; /* Header logo link position */
-    --header-logo-link-top: -1rem; /* Header logo link top */
-    --header-logo-link-left: 0; /* Header logo link left */
+    /* Colors */
+    --color-primary: #d73953;
+    --color-black: #090909;
+    --color-white: #ffffff;
+    --color-light-grey: #f3f3f3;
+    --color-dark-grey: #353535;
+  
+    /* Text and fonts */
+    --text-color: var(--color-black);
+    --font-family-base: Open Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
+    --font-family-title: Raleway, Helvetica Neue, Helvetica, Arial, sans-serif;
+    --font-size-small: 1.2rem;
+    --font-size-medium: 1.6rem;
+    --font-size-large: 1.8rem;
+    --font-size-x-large: 2.3rem;
+    --font-size-xx-large: 4.8rem;
+    --font-weight-regular: 400;
+    --font-weight-bold: 700;
+  
+    /* Line heights and sections */
+    --line-height-small: 1.2;
+    --line-height-base: 1.5;
+    --line-height-big: 1.8;
+    --section-header-align: center;
+    --section-tagline-transform: uppercase;
+    --section-title-margin: 0;
+    --section-title-color: var(--color-black);
+  
+    /* Section and header padding */
+    --section-padding: 5rem 0;
+    --section-header-padding: 0 0 3rem;
+    --section-body-padding: 0 0 3rem;
+    --section-footer-padding: 3rem 0 0;
+    --section-footer-align: center;
+    --footer-padding: 5rem 0 1rem;
+  
+    /* Navigation items */
+    --nav-item-font-family: var(--font-family-title);
+    --nav-item-font-weight: var(--font-weight-bold);
+    --nav-item-font-size: var(--font-size-medium);
+    --nav-item-letter-spacing: 0.04rem;
+    --nav-item-display: inline-block;
+    --nav-item-margin: 0 0 3rem 0;
+    --nav-item-link-hover: var(--color-white);
+  
+    /* Section tagline and buttons */
+    --section-tagline-margin: 0;
+    --button-display: inline-block;
+    --button-padding: 1.5rem 3rem;
+    --button-border: 0.2rem solid var(--color-primary);
+    --button-color: var(--color-black);
+    --button-text-decoration: none;
+    --button-font-size: var(--font-size-large);
+    --button-hover-color: var(--color-white);
+    --button-hover-text-decoration: none;
+    --button-hover-background: var(--color-primary;
+  
+    /* Header and logo */
+    --header-padding: 4rem 0 0;
+    --header-logo-position: relative;
+    --header-logo-link-display: inline-block;
+    --header-logo-link-position: absolute;
+    --header-logo-link-top: -1rem;
+    --header-logo-link-left: 0;
   }
   
-  /* Header Styles */
+  /* Header styles */
   .header {
     padding: var(--header-padding);
   }
@@ -69,7 +81,7 @@
     left: var(--header-logo-link-left);
   }
   
-  /* Body Styles */
+  /* Body styles */
   body {
     color: var(--text-color);
     font-family: var(--font-family-base);
@@ -78,7 +90,7 @@
     line-height: var(--line-height-base);
   }
   
-  /* Link Styles */
+  /* Links */
   a:link {
     color: var(--text-color);
     text-decoration: none;
@@ -96,26 +108,25 @@
     background-color: var(--color-light-grey);
   }
   
-  /* Box Sizing */
+  /* Box sizing and HTML settings */
   *,
   *::before,
   *::after {
     box-sizing: border-box;
   }
   
-  /* HTML Styles */
   html {
     scroll-behavior: smooth;
     font-size: 62.5%;
   }
   
-  /* Headings Styles */
+  /* Headings styles */
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-family-title);
     font-weight: var(--font-weight-bold);
   }
   
-  /* Section Styles */
+  /* Section styles */
   .section {
     padding: var(--section-padding);
   }
@@ -134,7 +145,6 @@
     text-align: var(--section-footer-align);
   }
   
-  /* Section Title Styles */
   .section-title {
     font-family: var(--font-family-title);
     font-size: var(--font-size-xx-large);
@@ -143,7 +153,6 @@
     color: var(--section-title-color);
   }
   
-  /* Section Tagline Styles */
   .section-tagline {
     color: var(--color-primary);
     font-family: var(--font-family-title);
@@ -152,7 +161,7 @@
     margin: var(--section-tagline-margin);
   }
   
-  /* Section Hero Styles */
+  /* Section hero styles */
   .section-hero {
     background-size: 90rem auto;
   }
@@ -165,7 +174,7 @@
     padding: 10rem 40rem 2rem 0;
   }
   
-  /* Row Styles */
+  /* Row and column styles */
   ul.row {
     margin: 0;
     padding: 0;
@@ -191,19 +200,18 @@
     clear: both;
   }
   
-  /* Container Styles */
+  /* Container styles */
   .container {
     width: 960px;
     margin-left: auto;
     margin-right: auto;
   }
   
-  /* Card Category Styles */
+  /* Card styles */
   .card-category {
     color: var(--color-primary);
   }
   
-  /* Card Testimonial Styles */
   .card-testimonial {
     text-align: center;
   }
@@ -220,7 +228,6 @@
     color: var(--color-primary);
   }
   
-  /* Card Services Styles */
   .card-services .card-title {
     margin: 0;
   }
@@ -237,12 +244,63 @@
     text-decoration: none;
   }
   
-  /* Visually Hidden Styles */
+  .card-work .card-outer {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .card-work .card-image img {
+    height: 30rem;
+    width: 100%;
+    object-fit: cover;
+    vertical-align: bottom;
+  }
+  
+  .card-work .card-inner {
+    position: absolute;
+    top: -0.1rem;
+    left: -0.1rem;
+    right: -0.1rem;
+    z-index: 1;
+  }
+  
+  .card-work:hover .card-inner {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  
+  .card-work .card-title {
+    text-align: center;
+    margin: 0;
+    opacity: 0;
+    height: 100%;
+    position: relative;
+  }
+  
+  .card-work .card-title a {
+    display: block;
+    text-decoration: none;
+    padding-top: 45%;
+  }
+  
+  .card-work .card-title a::after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: "";
+  }
+  
+  card-work:hover .card-title {
+    opacity: 1;
+  }
+  
+  /* Visually hidden class */
   .visually-hidden {
     display: none;
   }
   
-  /* Button Styles */
+  /* Button styles */
   .button {
     display: var(--button-display);
     padding: var(--button-padding);
@@ -258,12 +316,11 @@
     background: var(--button-hover-background);
   }
   
-  /* Navbar Menu Styles */
+  /* Navigation styles */
   .navbar-menu {
     float: right;
   }
   
-  /* Navigation Styles */
   .nav {
     margin: 0;
     padding: 0;
@@ -271,7 +328,6 @@
     list-style: none;
   }
   
-  /* Navigation Item Styles */
   .nav .nav-item {
     font-family: var(--nav-item-font-family);
     font-weight: var(--nav-item-font-weight);
@@ -281,13 +337,11 @@
     margin: var(--nav-item-margin);
   }
   
-  /* Navigation Link Styles */
   .nav .nav-link {
     display: block;
     padding: 0.5rem 1rem;
   }
   
-  /* Navigation Link Pseudo Element Styles */
   .nav .nav-link::before {
     content: "";
     position: absolute;
@@ -298,18 +352,16 @@
     height: 0.2rem;
   }
   
-  /* Navigation Link Hover Styles */
   .nav .nav-link:hover {
     color: var(--nav-item-link-hover);
   }
   
-  /* Navigation Item Hover Pseudo Element Styles */
   .nav .nav-item:hover .nav-link::before {
     background-color: var(--color-primary);
     width: 100%;
   }
   
-  /* Dark Theme Styles */
+  /* Dark theme */
   [data-section-theme="dark"] {
     --text-color: var(--color-white);
     --section-title-color: var(--color-white);
@@ -317,95 +369,30 @@
     --button-color: var(--color-white);
   }
   
-  /* Footer Styles */
+  /* Footer styles */
   .footer ul {
     text-align: right;
   }
   
-  /* Social Link Styles */
   .social-link {
     display: block;
   }
   
-  /* Social Link SVG Styles */
   .social-link > svg {
     fill: var(--text-color);
   }
   
-  /* Footer Address Styles */
   .footer-address {
     color: var(--text-color);
   }
   
-  /* Footer Copyright Styles */
   .footer-copyright {
     margin: 0;
     font-size: var(--font-size-small);
     color: var(--text-color);
   }
   
-  /* Footer Styles */
   .footer {
     padding: var(--footer-padding);
   }
-  
-  /* Card Outer Styles */
-  .card-outer {
-    position: relative;
-    overflow: hidden;
-  }
-  
-  /* Card Image Styles */
-  .card-outer .card-image img {
-    height: 30rem;
-    width: 100%;
-    object-fit: cover;
-    vertical-align: bottom;
-  }
-  
-  /* Card Inner Styles */
-  .card-outer .card-inner {
-    position: absolute;
-    top: -0.1rem;
-    left: -0.1rem;
-    right: -0.1rem;
-    z-index: 1;
-  }
-  
-  /* Card Outer Hover Styles */
-  .card-outer:hover .card-inner {
-    background-color: rgba(0, 0, 0, 0.7);
-  }
-  
-  /* Card Title Styles */
-  .card-outer .card-title {
-    text-align: center;
-    margin: 0;
-    opacity: 0;
-    height: 100%;
-    position: relative;
-  }
-  
-  /* Card Title Link Styles */
-  .card-outer .card-title a {
-    display: block;
-    text-decoration: none;
-    padding-top: 45%;
-  }
-  
-  /* Card Title Link After Pseudo Element Styles */
-  .card-outer .card-title a::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-  }
-  
-  /* Card Title Hover Styles */
-  .card-outer:hover .card-title {
-    opacity: 1;
-  }
-  
   
