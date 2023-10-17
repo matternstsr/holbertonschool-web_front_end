@@ -1,0 +1,27 @@
+body {
+  color: var(--text-color); /* Set the foreground color of the body to var(--text-color) */
+}
+
+a {
+  color: var(--text-color); /* Set the foreground color of all anchor elements to var(--text-color) */
+}
+
+.visually-hidden {
+  display: none; /* Set the display property of elements with the class visually-hidden to none */
+}
+
+.card-category {
+  color: var(--color-primary); /* Set the foreground color of elements with the class card-category to var(--color-primary) */
+}
+
+.section-tagline {
+  color: var(--color-primary); /* Set the foreground color of elements with the class section-tagline to var(--color-primary) */
+}
+:root {
+  --color-primary: #d73953;
+  --color-black: #090909;
+  --color-white: #ffffff;
+  --color-light-grey: #f3f3f3;
+  --color-dark-grey: #353535;
+  --text-color: var(--color-black);
+}
