@@ -1,7 +1,6 @@
-/* Create custom properties within a single :root block */
+/* Create a new custom property section-header-align and set it to center */
 :root {
     --section-header-align: center;
-    --section-tagline-transform: uppercase;
 }
 
 /* Apply the section-header-align property to elements with the class section-header */
@@ -25,11 +24,16 @@ a {
     color: var(--color-primary);
 }
 
-/* Apply the primary color to elements with the class section-tagline */
+/* Create a new custom property section-tagline-transform and set it to uppercase */
+:root {
+    --section-tagline-transform: uppercase;
+}
+
+/* Apply the section-tagline-transform property to elements with the class section-tagline */
 .section-tagline {
     font-family: var(--font-family-title);
-    font-weight: var(--font-weight-bold);
     text-transform: var(--section-tagline-transform);
+    font-weight: var(--font-weight-bold);
 }
 
 /* Apply the title font family to headings (h1, h2, h3, h4, h5, h6) */
