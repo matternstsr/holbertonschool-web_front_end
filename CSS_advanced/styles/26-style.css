@@ -1,89 +1,96 @@
+/* Define custom CSS variables */
 :root {
-    --color-primary: #d73953;
-    --color-black: #090909;
-    --color-white: #ffffff;
-    --color-light-grey: #f3f3f3;
-    --color-dark-grey: #353535;
-    --text-color: var(--color-black);
-    --font-family-base: "Open Sans", "Helvetica Neue", Helvetica, Arial,
-      sans-serif;
-    --font-family-title: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;
-    --font-size-small: 1.2rem;
-    --font-size-medium: 1.6rem;
-    --font-size-large: 1.8rem;
-    --font-size-x-large: 2.3rem;
-    --font-size-xx-large: 4.8rem;
-    --font-weight-regular: 400;
-    --font-weight-bold: 700;
-    --line-height-small: 1.2;
-    --line-height-base: 1.5;
-    --line-height-big: 1.8;
-    --section-header-align: center;
-    --section-tagline-transform: uppercase;
-    --section-title-margin: 0;
-    --section-title-color: var(--color-black);
-    --section-padding: 5rem 0;
-    --section-header-padding: 0 0 3rem;
-    --section-body-padding: 0 0 3rem;
-    --section-footer-padding: 3rem 0 0;
-    --section-footer-align: center;
-    --footer-padding: 5rem 0 1rem;
-    --nav-item-font-family: var(--font-family-title);
-    --nav-item-font-weight: var(--font-weight-bold);
-    --nav-item-font-size: var(--font-size-medium);
-    --nav-item-letter-spacing: 0.04rem;
-    --nav-item-display: inline-block;
-    --nav-item-margin: 0 0 3rem 0;
-    --nav-item-link-hover: var(--color-primary);
-    --section-tagline-margin: 0;
-    --button-display: inline-block;
-    --button-padding: 1.5rem 3rem;
-    --button-border: 0.2rem solid var(--color-primary);
-    --button-color: var(--color-black);
-    --button-text-decoration: none;
-    --button-font-size: var(--font-size-large);
-    --button-hover-color: var(--color-white);
-    --button-hover-text-decoration: none;
-    --button-hover-background: var(--color-primary);
+    --color-primary: #d73953; /* Primary color used throughout */
+    --color-black: #090909;   /* Black color */
+    --color-white: #ffffff;   /* White color */
+    --color-light-grey: #f3f3f3; /* Light grey color */
+    --color-dark-grey: #353535;   /* Dark grey color */
+    --text-color: var(--color-black); /* Text color */
+    --font-family-base: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; /* Base font family */
+    --font-family-title: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif; /* Font family for titles */
+    --font-size-small: 1.2rem; /* Small font size */
+    --font-size-medium: 1.6rem; /* Medium font size */
+    --font-size-large: 1.8rem;  /* Large font size */
+    --font-size-x-large: 2.3rem; /* Extra-large font size */
+    --font-size-xx-large: 4.8rem; /* Double extra-large font size */
+    --font-weight-regular: 400; /* Regular font weight */
+    --font-weight-bold: 700;    /* Bold font weight */
+    --line-height-small: 1.2; /* Small line height */
+    --line-height-base: 1.5;  /* Base line height */
+    --line-height-big: 1.8;   /* Larger line height */
+    --section-header-align: center; /* Header alignment in sections */
+    --section-tagline-transform: uppercase; /* Transform tagline text to uppercase */
+    --section-title-margin: 0; /* Margin for section titles */
+    --section-title-color: var(--color-black); /* Section title color */
+    --section-padding: 5rem 0; /* Section padding */
+    --section-header-padding: 0 0 3rem; /* Header padding within sections */
+    --section-body-padding: 0 0 3rem;   /* Body padding within sections */
+    --section-footer-padding: 3rem 0 0; /* Footer padding within sections */
+    --section-footer-align: center; /* Footer alignment within sections */
+    --footer-padding: 5rem 0 1rem; /* Padding for the footer */
+    --nav-item-font-family: var(--font-family-title); /* Font family for navigation items */
+    --nav-item-font-weight: var(--font-weight-bold);  /* Font weight for navigation items */
+    --nav-item-font-size: var(--font-size-medium);    /* Font size for navigation items */
+    --nav-item-letter-spacing: 0.04rem;  /* Letter spacing for navigation items */
+    --nav-item-display: inline-block;   /* Display style for navigation items */
+    --nav-item-margin: 0 0 3rem 0;     /* Margin for navigation items */
+    --nav-item-link-hover: var(--color-primary); /* Link color on hover */
+    --section-tagline-margin: 0; /* Margin for section taglines */
+    --button-display: inline-block;  /* Display style for buttons */
+    --button-padding: 1.5rem 3rem;   /* Padding for buttons */
+    --button-border: 0.2rem solid var(--color-primary); /* Border for buttons */
+    --button-color: var(--color-black); /* Button text color */
+    --button-text-decoration: none;     /* Text decoration for buttons */
+    --button-font-size: var(--font-size-large); /* Font size for buttons */
+    --button-hover-color: var(--color-white);  /* Text color on button hover */
+    --button-hover-text-decoration: none;     /* Text decoration on button hover */
+    --button-hover-background: var(--color-primary); /* Background color on button hover */
   }
   
+  /* Apply the box-sizing property to all elements */
   *,
   *:before,
   *:after {
     box-sizing: border-box;
   }
   
+  /* Adjust the font size for the entire HTML document */
   html {
     scroll-behavior: smooth;
-    font-size: 62.5%;
+    font-size: 62.5%; /* Sets 1rem to be 10px for easier calculation */
   }
   
+  /* Define base styles for the body element */
   body {
-    color: var(--text-color);
-    font-family: var(--font-family-base);
-    font-size: var(--font-size-medium);
-    font-weight: var(--font-weight-regular);
-    line-height: var(--line-height-base);
+    color: var(--text-color); /* Set text color */
+    font-family: var(--font-family-base); /* Set base font family */
+    font-size: var(--font-size-medium);   /* Set base font size */
+    font-weight: var(--font-weight-regular); /* Set base font weight */
+    line-height: var(--line-height-base);   /* Set base line height */
   }
   
+  /* Override styles for sections with a 'dark' theme */
   [data-section-theme="dark"] {
-    --text-color: var(--color-white);
-    --section-title-color: var(--color-white);
-    background-color: var(--color-black);
-    --button-color: var(--color-white);
+    --text-color: var(--color-white);  /* Set text color to white */
+    --section-title-color: var(--color-white); /* Set section title color to white */
+    background-color: var(--color-black);     /* Set background color to black */
+    --button-color: var(--color-white); /* Set button text color to white */
   }
   
+  /* Styles for the navigation bar menu */
   .navbar-menu {
-    float: right;
+    float: right; /* Float the menu to the right */
   }
   
+  /* Styles for the navigation list */
   .nav {
     margin: 0;
     padding: 0;
     list-style-type: none;
-    text-align: center;
+    text-align: center; /* Center-align the navigation list */
   }
   
+  /* Styles for navigation items */
   .nav .nav-item {
     font-family: var(--nav-item-font-family);
     font-weight: var(--nav-item-font-weight);
@@ -93,183 +100,219 @@
     margin: var(--nav-item-margin);
   }
   
+  /* Styles for navigation links */
   .nav .nav-link {
     display: block;
     padding: 0.5rem 1rem;
   }
   
+  /* Styles for navigation links on hover */
   .nav .nav-link:hover {
     color: var(--nav-item-link-hover);
   }
   
+  /* Define styles for heading elements (h1, h2, h3, h4, h5, h6) */
   h1,
   h2,
   h3,
   h4,
   h5,
   h6 {
-    font-family: var(--font-family-title);
-    font-weight: var(--font-weight-bold);
+    font-family: var(--font-family-title); /* Use the title font family */
+    font-weight: var(--font-weight-bold);   /* Use a bold font weight */
   }
   
+  /* Styles for unvisited links */
   a:link {
-    color: var(--text-color);
-    text-decoration: none;
+    color: var(--text-color); /* Set link color */
+    text-decoration: none;    /* Remove underline from links */
   }
   
+  /* Styles for visited links */
   a:visited {
-    font-style: italic;
+    font-style: italic; /* Make visited links italic */
   }
   
+  /* Styles for links on hover */
   a:hover {
-    text-decoration: underline;
+    text-decoration: underline; /* Add underline on hover */
   }
   
+  /* Styles for active links */
   a:active {
-    background-color: var(--color-light-grey);
+    background-color: var(--color-light-grey); /* Set background color for active links */
   }
   
+  /* Styles for buttons */
   .button {
-    display: var(--button-display);
-    padding: var(--button-padding);
-    border: var(--button-border);
-    font-size: var(--button-font-size);
-    color: var(--button-color);
-    text-decoration: var(--button-text-decoration);
+    display: var(--button-display); /* Set button display style */
+    padding: var(--button-padding);   /* Set button padding */
+    border: var(--button-border);     /* Set button border */
+    font-size: var(--button-font-size); /* Set button font size */
+    color: var(--button-color);       /* Set button text color */
+    text-decoration: var(--button-text-decoration); /* Set text decoration for buttons */
   }
   
+  /* Styles for buttons on hover */
   .button:hover {
-    color: var(--button-hover-color);
-    text-decoration: var(--button-hover-text-decoration);
-    background: var(--button-hover-background);
+    color: var(--button-hover-color); /* Set text color on hover */
+    text-decoration: var(--button-hover-text-decoration); /* Set text decoration on hover */
+    background: var(--button-hover-background); /* Set background color on hover */
   }
   
+  /* CSS for visually hidden elements */
   .visually-hidden {
-    display: none;
+    display: none; /* Hide visually hidden elements */
   }
   
+  /* Styles for elements with class 'card-category' */
   .card-category {
-    color: var(--color-primary);
+    color: var(--color-primary); /* Set text color for card categories */
   }
   
+  /* Styles for sections */
   .section {
-    padding: var(--section-padding);
+    padding: var(--section-padding); /* Set section padding */
   }
   
+  /* Styles for section headers */
   .section-header {
-    text-align: var(--section-header-align);
-    padding: var(--section-header-padding);
+    text-align: var(--section-header-align); /* Set header alignment */
+    padding: var(--section-header-padding);   /* Set header padding */
   }
   
+  /* Styles for elements with class 'card-services' and their titles */
   .card-services .card-title {
-    margin: 0;
+    margin: 0; /* Remove margin for card titles */
   }
   
+  /* Styles for links within elements with class 'card-services' */
   .card-services a {
     display: block;
-    padding: 2rem;
-    background-color: var(--color-light-grey);
+    padding: 2rem; /* Set padding for card services links */
+    background-color: var(--color-light-grey); /* Set background color */
   }
   
+  /* Styles for card service links on hover */
   .card-services a:hover {
-    color: var(--color-white);
-    background-color: var(--color-primary);
-    text-decoration: none;
+    color: var(--color-white); /* Set text color on hover */
+    background-color: var(--color-primary); /* Set background color on hover */
+    text-decoration: none; /* Remove text decoration on hover */
   }
   
+  /* Styles for elements with class 'card-testimonial' */
   .card-testimonial {
-    text-align: center;
+    text-align: center; /* Center-align card testimonials */
   }
   
+  /* Styles for the avatar in card testimonials */
   .card-testimonial .card-avatar {
     border-radius: 50%;
     width: 10rem;
-    height: 10rem;
+    height: 10rem; /* Set styles for the avatar */
   }
   
+  /* Styles for the citation in card testimonials */
   .card-testimonial .card-quote cite {
     display: block;
     padding-top: 1rem;
-    color: var(--color-primary);
+    color: var(--color-primary); /* Set citation styles */
   }
   
+  /* Styles for the section body */
   .section-body {
-    padding: var(--section-body-padding);
+    padding: var(--section-body-padding); /* Set section body padding */
   }
   
+  /* Styles for the section footer */
   .section-footer {
-    padding: var(--section-footer-padding);
-    text-align: var(--section-footer-align);
+    padding: var(--section-footer-padding); /* Set section footer padding */
+    text-align: var(--section-footer-align); /* Set footer alignment */
   }
   
+  /* Styles for section titles */
   .section-title {
     font-family: var(--font-family-title);
     font-size: var(--font-size-xx-large);
     font-weight: var(--font-weight-bold);
     margin: var(--section-title-margin);
-    color: var(--section-title-color);
+    color: var(--section-title-color); /* Set styles for section titles */
   }
   
+  /* Styles for section taglines */
   .section-tagline {
     color: var(--color-primary);
     font-family: var(--font-family-title);
     text-transform: var(--section-tagline-transform);
     font-weight: var(--font-weight-bold);
-    margin: var(--section-tagline-margin);
+    margin: var(--section-tagline-margin); /* Set styles for section taglines */
   }
   
+  /* Clear floats in rows */
   .row::after {
     content: "";
     display: table;
     clear: both;
   }
   
+  /* Styles for unordered lists with class 'row' */
   ul.row {
     margin: 0;
     padding: 0;
     list-style-type: none;
   }
   
+  /* Define column styles */
   .col-1-3 {
-    width: 33.33%;
+    width: 33.33%; /* 1/3 column width */
   }
   
   .col-1-2 {
-    width: 50%;
+    width: 50%; /* 1/2 column width */
   }
   
+  /* Styles for columns with class starting with 'col-' */
   [class^="col-"] {
     float: left;
-    padding: 0.5rem;
+    padding: 0.5rem; /* Set column styles */
   }
   
+  /* Define container styles */
   .container {
-    width: 960px;
+    width: 960px; /* Set container width */
     margin-left: auto;
-    margin-right: auto;
+    margin-right: auto; /* Center-align the container */
   }
   
+  /* Styles for the footer */
   .footer {
-    padding: var(--footer-padding);
+    padding: var(--footer-padding); /* Set footer padding */
   }
   
+  /* Styles for the copyright information in the footer */
   .footer-copyright {
     margin: 0;
-    font-size: var(--font-size-small);
-    color: var(--text-color);
+    font-size: var(--font-size-small); /* Set font size for copyright info */
+    color: var(--text-color); /* Set text color */
   }
   
+  /* Styles for the footer's unordered list */
   .footer ul {
-    text-align: right;
+    text-align: right; /* Right-align the footer's unordered list */
   }
   
+  /* Styles for the address information in the footer */
   .footer-address {
-    color: var(--text-color);
+    color: var(--text-color); /* Set text color for address info */
   }
   
+  /* Styles for social links */
   .social-link {
-    display: block;
+    display: block; /* Display social links as blocks */
   }
   
+  /* Styles for SVG icons in social links */
   .social-link > svg {
-    fill: var(--text-color);
+    fill: var(--text-color); /* Set SVG icon fill color */
+  }
+  
