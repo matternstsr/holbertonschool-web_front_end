@@ -4,8 +4,6 @@
     --section-tagline-transform: uppercase;
     --section-title-margin: 0;
     --section-title-color: var(--color-black);
-    --text-color: #000; /* Define the text color variable */
-    --color-light-grey: #ccc; /* Define the color-light-grey variable */
 }
 
 /* Apply the section-header-align property to elements with the class section-header */
@@ -13,25 +11,26 @@
     text-align: var(--section-header-align);
 }
 
-/* Remove text decorations from anchor elements */
-/* Target anchor elements that contain hyperlinks */
-a[href]:not(.visually-hidden) {
+/* Target anchor elements with hyperlinks */
+a[href]:link {
     color: var(--text-color); /* Set the text color */
+    text-decoration: none;    /* Remove underlines and other decorations */
+    font-style: italic;       /* Italicize the text */
+}
 
-    /* Visited state for the link */
-    &:visited {
-        font-style: italic;
-    }
+/* Target the visited state for anchor elements with hyperlinks */
+a[href]:visited {
+    font-style: italic;       /* Italicize the text for visited links */
+}
 
-    /* Hover state for the link */
-    &:hover {
-        text-decoration: underline; /* Decorate the links with an underline when hovering */
-    }
+/* Target the hover state for anchor elements with hyperlinks */
+a[href]:hover {
+    text-decoration: underline; /* Decorate the links with an underline when hovering */
+}
 
-    /* Active state for the link */
-    &:active {
-        background-color: var(--color-light-grey); /* Set the color of the background with the variable color-light-grey */
-    }
+/* Target the active state for anchor elements with hyperlinks */
+a[href]:active {
+    background-color: var(--color-light-grey); /* Set the color of the background with the variable color-light-grey */
 }
 
 /* Hide elements with the class visually-hidden by setting their display property to none */
@@ -63,5 +62,5 @@ a[href]:not(.visually-hidden) {
 /* Apply the title font family to headings (h1, h2, h3, h4, h5, h6) */
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-family-title);
-    font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-bold); /* Set the font weight to font-weight-bold */
 }
