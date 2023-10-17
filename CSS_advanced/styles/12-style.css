@@ -1,0 +1,50 @@
+/* Create custom properties within a single :root block */
+:root {
+    --section-header-align: center;
+    --section-tagline-transform: uppercase;
+    --section-title-margin: 0;
+    --section-title-color: var(--color-black);
+}
+
+/* Apply the section-header-align property to elements with the class section-header */
+.section-header {
+    text-align: var(--section-header-align);
+}
+
+/* Remove text decorations from anchor elements */
+a {
+    color: var(--text-color); /* Set the text color */
+    text-decoration: none;    /* Remove underlines and other decorations */
+}
+
+/* Hide elements with the class visually-hidden by setting their display property to none */
+.visually-hidden {
+    display: none;
+}
+
+/* Apply the primary color to elements with the class card-category */
+.card-category {
+    color: var(--color-primary);
+}
+
+/* Apply the primary color to elements with the class section-tagline */
+.section-tagline {
+    font-family: var(--font-family-title);
+    font-weight: var(--font-weight-bold);
+    text-transform: var(--section-tagline-transform);
+}
+
+/* Apply the title font family and other styles to elements with the class section-title */
+.section-title {
+    font-family: var(--font-family-title);
+    font-size: var(--font-size-xx-large);
+    font-weight: var(--font-weight-bold);
+    margin: var(--section-title-margin);
+    color: var(--section-title-color);
+}
+
+/* Apply the title font family to headings (h1, h2, h3, h4, h5, h6) */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-family-title);
+    font-weight: var(--font-weight-bold); /* Set the font weight to font-weight-bold */
+}
