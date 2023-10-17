@@ -1,6 +1,26 @@
 /* Create a new custom property section-header-align and set it to center */
+/* Create a new custom property section-tagline-transform and set it to uppercase */
 :root {
-    --section-header-align: center;
+	--color-primary: #d73953;
+	--color-black: #090909;
+	--color-white: #ffffff;
+	--color-light-grey: #f3f3f3;
+	--color-dark-grey: #353535;
+	--text-color: var(--color-black);
+	--font-family-base: Open Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
+	--font-family-title: Raleway, Helvetica Neue, Helvetica, Arial, sans-serif;
+	--font-size-small: 1.2rem;
+	--font-size-medium: 1.6rem;
+	--font-size-large: 1.8rem;
+	--font-size-x-large: 2.3rem;
+	--font-size-xx-large: 4.8rem;
+	--font-weight-regular: 400;
+	--font-weight-bold: 700;
+	--line-height-small: 1.2;
+	--line-height-base: 1.5;
+	--line-height-big: 1.8;
+	--section-header-align: center;
+	--section-tagline-transform: uppercase;
 }
 
 /* Apply the section-header-align property to elements with the class section-header */
@@ -24,9 +44,12 @@ a {
     color: var(--color-primary);
 }
 
-/* Create a new custom property section-tagline-transform and set it to uppercase */
-:root {
-    --section-tagline-transform: uppercase;
+body {
+	color: var(--text-color);
+	font-family: var(--font-family-base);
+	font-size: var(--font-size-medium);
+	font-weight: var(--font-weight-regular);
+	line-height: var(--line-height-base);
 }
 
 /* Apply the section-tagline-transform property to elements with the class section-tagline */
@@ -34,6 +57,7 @@ a {
     font-family: var(--font-family-title);
     text-transform: var(--section-tagline-transform);
     font-weight: var(--font-weight-bold);
+    color: var(--color-primary);
 }
 
 /* Apply the title font family to headings (h1, h2, h3, h4, h5, h6) */
