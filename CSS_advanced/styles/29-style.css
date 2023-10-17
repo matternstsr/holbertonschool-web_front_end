@@ -1,127 +1,350 @@
-/* Define custom CSS variables for color, typography, and layout */
+/* Define custom CSS variables */
 :root {
-    --color-primary: #d73953;
-    --color-black: #090909;
-    --color-white: #ffffff;
-    --color-light-grey: #f3f3f3;
-    --color-dark-grey: #353535;
-    --text-color: var(--color-black); /* Set text color */
-    --font-family-base: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; /* Base font family */
-    --font-family-title: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif; /* Title font family */
-    /* Define various font sizes and styles */
-    --font-size-small: 1.2rem;
-    --font-size-medium: 1.6rem;
-    --font-size-large: 1.8rem;
-    --font-size-x-large: 2.3rem;
-    --font-size-xx-large: 4.8rem;
-    --font-weight-regular: 400;
-    --font-weight-bold: 700;
-    /* Define line heights */
-    --line-height-small: 1.2;
-    --line-height-base: 1.5;
-    --line-height-big: 1.8;
-    /* Define various section and header styles */
-    --section-header-align: center;
-    --section-tagline-transform: uppercase;
-    --section-title-margin: 0;
-    --section-title-color: var(--color-black);
-    --section-padding: 5rem 0;
-    --section-header-padding: 0 0 3rem;
-    --section-body-padding: 0 0 3rem;
-    --section-footer-padding: 3rem 0 0;
-    --section-footer-align: center;
-    --footer-padding: 5rem 0 1rem;
-    /* Define navigation item styles */
-    --nav-item-font-family: var(--font-family-title);
-    --nav-item-font-weight: var(--font-weight-bold);
-    --nav-item-font-size: var(--font-size-medium);
-    --nav-item-letter-spacing: 0.04rem;
-    --nav-item-display: inline-block;
-    --nav-item-margin: 0 0 3rem 0;
-    --nav-item-link-hover: var(--color-white);
-    /* Define button styles */
-    --button-display: inline-block;
-    --button-padding: 1.5rem 3rem;
-    --button-border: 0.2rem solid var(--color-primary);
-    --button-color: var(--color-black);
-    --button-text-decoration: none;
-    --button-font-size: var(--font-size-large);
-    --button-hover-color: var(--color-white);
-    --button-hover-text-decoration: none;
-    --button-hover-background: var(--color-primary);
-    /* Define header styles */
-    --header-padding: 4rem 0 0;
-    --header-logo-position: relative;
-    --header-logo-link-display: inline-block;
-    --header-logo-link-position: absolute;
-    --header-logo-link-top: -1rem;
-    --header-logo-link-left: 0;
-}
-
-/* Apply box-sizing: border-box to all elements */
-*, *:before, *:after {
-    box-sizing: border-box;
-}
-
-/* Set smooth scrolling behavior and adjust font size for the root HTML element */
-html {
-    scroll-behavior: smooth;
-    font-size: 62.5%; /* 1rem = 10px for easier calculations */
-}
-
-/* Define base styles for the entire document */
-body {
-    color: var(--text-color);
-    font-family: var(--font-family-base);
-    font-size: var(--font-size-medium);
-    font-weight: var(--font-weight-regular);
-    line-height: var(--line-height-base);
-}
-
-/* Style the header section */
-.header {
-    padding: var(--header-padding);
-}
-
-/* Style the header logo */
-.header-logo {
-    position: var(--header-logo-position);
-}
-
-.header-logo a {
-    display: var(--header-logo-link-display);
-    position: var(--header-logo-link-position);
-    top: var(--header-logo-link-top);
-    left: var(--header-logo-link-left);
-}
-
-/* Define styles for the dark theme */
-[data-section-theme="dark"] {
-    --text-color: var(--color-white); /* Update text color for dark theme */
-    --section-title-color: var(--color-white); /* Update section title color for dark theme */
-    background-color: var(--color-black); /* Set background color for dark theme */
-    --button-color: var(--color-white); /* Update button text color for dark theme */
-}
-
-/* Style the navigation menu */
-.navbar-menu {
-    float: right;
-}
-
-/* Style the navigation list */
-.nav {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    text-align: center;
-}
-
-/* Style navigation items */
-.nav .nav-item {
-    font-family: var(--nav-item-font-family);
-    font-weight: var(--nav-item-font-weight);
-    font-size: var(--nav-item-font-size);
-    letter-spacing: var(--nav-item-letter-spacing);
-    display: var(--nav-item-display);
-    margin: var(--nav-item-margin);
-}
+    --color-primary: #d73953; /* Primary color */
+    --color-black: #090909; /* Black color */
+    --color-white: #ffffff; /* White color */
+    --color-light-grey: #f3f3f3; /* Light grey color */
+    --color-dark-grey: #353535; /* Dark grey color */
+    --text-color: var(--color-black); /* Text color, defaults to black */
+    --font-family-base: Open Sans, Helvetica Neue, Helvetica, Arial, sans-serif; /* Base font family */
+    --font-family-title: Raleway, Helvetica Neue, Helvetica, Arial, sans-serif; /* Title font family */
+    --font-size-small: 1.2rem; /* Small font size */
+    --font-size-medium: 1.6rem; /* Medium font size */
+    --font-size-large: 1.8rem; /* Large font size */
+    --font-size-x-large: 2.3rem; /* Extra-large font size */
+    --font-size-xx-large: 4.8rem; /* Double extra-large font size */
+    --font-weight-regular: 400; /* Regular font weight */
+    --font-weight-bold: 700; /* Bold font weight */
+    --line-height-small: 1.2; /* Small line height */
+    --line-height-base: 1.5; /* Base line height */
+    --line-height-big: 1.8; /* Larger line height */
+    --section-header-align: center; /* Center-align section headers */
+    --section-tagline-transform: uppercase; /* Uppercase section taglines */
+    --section-title-margin: 0; /* No margin for section titles */
+    --section-title-color: var(--color-black); /* Section title color, defaults to black */
+    --section-padding: 5rem 0; /* Section padding (vertical 5rem, horizontal 0) */
+    --section-header-padding: 0 0 3rem; /* Section header padding (vertical 0, horizontal 0, bottom 3rem) */
+    --section-body-padding: 0 0 3rem; /* Section body padding (vertical 0, horizontal 0, bottom 3rem) */
+    --section-footer-padding: 3rem 0 0; /* Section footer padding (vertical 3rem, horizontal 0) */
+    --section-footer-align: center; /* Center-align section footers */
+    --footer-padding: 5rem 0 1rem; /* Footer padding (vertical 5rem, horizontal 0, bottom 1rem) */
+    --nav-item-font-family: var(--font-family-title); /* Font family for navigation items */
+    --nav-item-font-weight: var(--font-weight-bold); /* Font weight for navigation items */
+    --nav-item-font-size: var(--font-size-medium); /* Font size for navigation items */
+    --nav-item-letter-spacing: 0.04rem; /* Letter spacing for navigation items */
+    --nav-item-display: inline-block; /* Display navigation items as inline-block */
+    --nav-item-margin: 0 0 3rem 0; /* Margin for navigation items (bottom margin 3rem) */
+    --nav-item-link-hover: var(--color-white); /* Link hover color (defaults to white) */
+    --section-tagline-margin: 0; /* No margin for section taglines */
+    --button-display: inline-block; /* Display buttons as inline-block */
+    --button-padding: 1.5rem 3rem; /* Button padding (vertical 1.5rem, horizontal 3rem) */
+    --button-border: 0.2rem solid var(--color-primary); /* Button border (0.2rem solid with primary color) */
+    --button-color: var(--color-black); /* Button text color (defaults to black) */
+    --button-text-decoration: none; /* No text decoration for buttons */
+    --button-font-size: var(--font-size-large); /* Button font size (defaults to large) */
+    --button-hover-color: var(--color-white); /* Button hover text color (defaults to white) */
+    --button-hover-text-decoration: none; /* No text decoration on button hover */
+    --button-hover-background: var(--color-primary); /* Button hover background color (defaults to primary color) */
+    --header-padding: 4rem 0 0; /* Header padding (vertical 4rem, horizontal 0) */
+    --header-logo-position: relative; /* Header logo position (relative) */
+    --header-logo-link-display: inline-block; /* Display header logo link as inline-block */
+    --header-logo-link-position: absolute; /* Header logo link position (absolute) */
+    --header-logo-link-top: -1rem; /* Header logo link top position (shifted up by 1rem) */
+    --header-logo-link-left: 0; /* Header logo link left position (aligned with the left) */
+  }
+  
+  /* Styles for the website header */
+  .header {
+    padding: var(--header-padding); /* Apply header padding as defined */
+  }
+  
+  .header-logo {
+    position: var(--header-logo-position); /* Apply header logo position as defined */
+  }
+  
+  .header-logo a {
+    display: var(--header-logo-link-display); /* Apply header logo link display property as defined */
+    position: var(--header-logo-link-position); /* Apply header logo link position as defined */
+    top: var(--header-logo-link-top); /* Apply header logo link top position as defined */
+    left: var(--header-logo-link-left); /* Apply header logo link left position as defined */
+  }
+  
+  /* Default body styles */
+  body {
+    color: var(--text-color); /* Apply text color as defined */
+    font-family: var(--font-family-base); /* Apply base font family as defined */
+    font-size: var(--font-size-medium); /* Apply medium font size as defined */
+    font-weight: var(--font-weight-regular); /* Apply regular font weight as defined */
+    line-height: var(--line-height-base); /* Apply base line height as defined */
+  }
+  
+  /* Link styles */
+  a:link {
+    color: var(--text-color); /* Apply text color to links */
+    text-decoration: none; /* Remove underlines from links */
+  }
+  
+  /* Visited link style */
+  a:visited {
+    font-style: italic; /* Make visited links italic */
+  }
+  
+  /* Hover effect for links */
+  a:hover {
+    text-decoration: underline; /* Underline on link hover */
+  }
+  
+  /* Active link style */
+  a:active {
+    background-color: var(--color-light-grey); /* Apply background color on link click */
+  }
+  
+  /* Global box-sizing property */
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box; /* Apply border-box box-sizing to all elements and pseudo-elements */
+  }
+  
+  /* Adjust base font size */
+  html {
+    scroll-behavior: smooth; /* Enable smooth scrolling */
+    font-size: 62.5%; /* Set the base font size to 62.5% for easier rem unit calculations */
+  }
+  
+  /* Header styles for various headings */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-family-title); /* Apply title font family to headings */
+    font-weight: var(--font-weight-bold); /* Apply bold font weight to headings */
+  }
+  
+  /* Styles for sections on the website */
+  .section {
+    padding: var(--section-padding); /* Apply section padding as defined */
+  }
+  
+  .section-header {
+    text-align: var(--section-header-align); /* Apply section header alignment as defined */
+    padding: var(--section-header-padding); /* Apply section header padding as defined */
+  }
+  
+  .section-body {
+    padding: var(--section-body-padding); /* Apply section body padding as defined */
+  }
+  
+  .section-footer {
+    padding: var(--section-footer-padding); /* Apply section footer padding as defined */
+    text-align: var(--section-footer-align); /* Apply section footer alignment as defined */
+  }
+  
+  /* Styles for section titles */
+  .section-title {
+    font-family: var(--font-family-title); /* Apply title font family to section titles */
+    font-size: var(--font-size-xx-large); /* Apply double extra-large font size to section titles */
+    font-weight: var(--font-weight-bold); /* Apply bold font weight to section titles */
+    margin: var(--section-title-margin); /* Apply section title margin as defined */
+    color: var(--section-title-color); /* Apply section title color as defined */
+  }
+  
+  /* Styles for section taglines */
+  .section-tagline {
+    color: var(--color-primary); /* Apply primary color to section taglines */
+    font-family: var(--font-family-title); /* Apply title font family to section taglines */
+    text-transform: var(--section-tagline-transform); /* Apply text transformation to section taglines */
+    font-weight: var(--font-weight-bold); /* Apply bold font weight to section taglines */
+    margin: var(--section-tagline-margin); /* Apply section tagline margin as defined */
+  }
+  
+  /* Hero section specific styles */
+  .section-hero {
+    background-size: 90rem auto; /* Set background size for hero section */
+  }
+  
+  .section-hero .section-title {
+    margin-bottom: 5rem; /* Apply margin to section titles in hero section */
+  }
+  
+  .section-hero .section-inner {
+    padding: 10rem 40rem 2rem 0; /* Apply padding to the inner content of the hero section */
+  }
+  
+  /* Styles for row and column layout */
+  ul.row {
+    margin: 0; /* Remove margin for row lists */
+    padding: 0; /* Remove padding for row lists */
+    list-style: none; /* Remove list-style for row lists */
+  }
+  
+  [class^="col-"] {
+    float: left; /* Make columns float left */
+    padding: 0.5rem; /* Apply padding to columns */
+  }
+  
+  .col-1-3 {
+    width: 33.33%; /* Set width for 1/3 columns */
+  }
+  
+  .col-1-2 {
+    width: 50%; /* Set width for 1/2 columns */
+  }
+  
+  .row::after {
+    content: ""; /* Clear floating elements */
+    display: table;
+    clear: both;
+  }
+  
+  /* Container width and alignment */
+  .container {
+    width: 960px; /* Set container width to 960 pixels */
+    margin-left: auto; /* Auto margin on the left side for centering */
+    margin-right: auto; /* Auto margin on the right side for centering */
+  }
+  
+  /* Category card styles */
+  .card-category {
+    color: var(--color-primary); /* Apply primary color to category cards */
+  }
+  
+  /* Testimonial card styles */
+  .card-testimonial {
+    text-align: center; /* Center-align content in testimonial cards */
+  }
+  
+  .card-testimonial .card-avatar {
+    width: 10rem; /* Set avatar width in testimonial cards */
+    height: 10rem; /* Set avatar height in testimonial cards */
+    border-radius: 50%; /* Apply a circular border to avatars */
+  }
+  
+  .card-testimonial .card-quote cite {
+    display: block; /* Make cite elements block-level in testimonial cards */
+    padding-top: 1rem; /* Apply padding to the top of cite elements in testimonial cards */
+    color: var(--color-primary); /* Apply primary color to cite elements */
+  }
+  
+  /* Services card styles */
+  .card-services .card-title {
+    margin: 0; /* Remove margin for card titles in services cards */
+  }
+  
+  .card-services a {
+    display: block; /* Make links block-level in services cards */
+    padding: 2rem; /* Apply padding to links in services cards */
+    background-color: var(--color-light-grey); /* Apply light grey background to links */
+  }
+  
+  /* Hover effect for services cards */
+  .card-services a:hover {
+    color: var(--color-white); /* Apply white text color on hover */
+    background-color: var(--color-primary); /* Apply primary color background on hover */
+    text-decoration: none; /* Remove text decoration on hover */
+  }
+  
+  /* Visually hidden element */
+  .visually-hidden {
+    display: none; /* Hide visually-hidden elements */
+  }
+  
+  /* Button styles */
+  .button {
+    display: var(--button-display); /* Apply button display property as defined */
+    padding: var(--button-padding); /* Apply button padding as defined */
+    border: var(--button-border); /* Apply button border as defined */
+    font-size: var(--button-font-size); /* Apply button font size as defined */
+    color: var(--button-color); /* Apply button text color as defined */
+    text-decoration: var(--button-text-decoration); /* Apply button text decoration as defined */
+  }
+  
+  /* Hover effect for buttons */
+  .button:hover {
+    color: var(--button-hover-color); /* Apply hover text color as defined */
+    text-decoration: var(--button-hover-text-decoration); /* Apply hover text decoration as defined */
+    background: var(--button-hover-background); /* Apply hover background color as defined */
+  }
+  
+  /* Styles for the navigation menu */
+  .navbar-menu {
+    float: right; /* Float the navigation menu to the right */
+  }
+  
+  /* Styles for the navigation list */
+  .nav {
+    margin: 0; /* Remove margin for navigation lists */
+    padding: 0; /* Remove padding for navigation lists */
+    text-align: center; /* Center-align navigation items */
+    list-style: none; /* Remove list-style for navigation lists */
+  }
+  
+  /* Styles for navigation items */
+  .nav .nav-item {
+    font-family: var(--nav-item-font-family); /* Apply font family to navigation items */
+    font-weight: var(--nav-item-font-weight); /* Apply font weight to navigation items */
+    font-size: var(--nav-item-font-size); /* Apply font size to navigation items */
+    letter-spacing: var(--nav-item-letter-spacing); /* Apply letter spacing to navigation items */
+    display: var(--nav-item-display); /* Apply display property to navigation items */
+    margin: var(--nav-item-margin); /* Apply margin to navigation items */
+  }
+  
+  /* Styles for navigation links */
+  .nav .nav-link {
+    display: block; /* Make navigation links block-level */
+    padding: 0.5rem 1rem; /* Apply padding to navigation links */
+  }
+  
+  /* Styles for the before pseudo-elements of navigation links */
+  .nav .nav-link::before {
+    content: ""; /* Clear content for pseudo-elements */
+    position: absolute; /* Absolutely position the pseudo-elements */
+    top: 0; /* Set vertical position to 0 */
+    left: 0; /* Set horizontal position to 0 */
+    background-color: var(--color-white); /* Apply background color as defined */
+    width: 0; /* Set width to 0 */
+    height: 20%; /* Set height to 20% of the root element value */
+  }
+  
+  /* Styles for the before pseudo-elements of navigation links when nav-item is hovered and is inside nav */
+  .nav .nav-item:hover .nav-link::before {
+    background-color: var(--color-primary); /* Apply primary color background */
+    width: 100%; /* Expand width to 100% on hover */
+  }
+  
+  /* Styles for dark-themed sections */
+  [data-section-theme="dark"] {
+    --text-color: var(--color-white); /* Change text color to white for dark-themed sections */
+    --section-title-color: var(--color-white); /* Change section title color to white for dark-themed sections */
+    background: var(--color-black); /* Apply black background for dark-themed sections */
+    --button-color: var(--color-white); /* Change button text color to white for dark-themed sections */
+  }
+  
+  /* Styles for the footer */
+  .footer ul {
+    text-align: right; /* Right-align the content of footer lists */
+  }
+  
+  /* Social link styles */
+  .social-link {
+    display: block; /* Make social links block-level */
+  }
+  
+  .social-link > svg {
+    fill: var(--text-color); /* Apply text color to SVG icons in social links */
+  }
+  
+  /* Address in the footer */
+  .footer-address {
+    color: var(--text-color); /* Apply text color to the address in the footer */
+  }
+  
+  /* Copyright notice in the footer */
+  .footer-copyright {
+    margin: 0; /* Remove margin for the copyright notice */
+    font-size: var(--font-size-small); /* Apply small font size to the copyright notice */
+    color: var(--text-color); /* Apply text color to the copyright notice */
+  }
+  
+  /* Styles for the footer */
+  .footer {
+    padding: var(--footer-padding); /* Apply footer padding as defined */
+  }
+  
