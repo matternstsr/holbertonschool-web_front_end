@@ -1,0 +1,59 @@
+/* Define custom CSS variables for color, text properties, and font sizes */
+:root {
+    --color-primary: #d73953;             /* Define a custom primary color */
+    --color-black: #090909;               /* Define a custom black color */
+    --color-white: #ffffff;               /* Define a custom white color */
+    --color-light-grey: #f3f3f3;         /* Define a custom light grey color */
+    --color-dark-grey: #353535;           /* Define a custom dark grey color */
+    --text-color: var(--color-black);     /* Define the text color and initialize it with the black color */
+    --font-family-base: 'Open Sans', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif; /* Define the base font family with Open Sans as the first choice */
+    --font-family-title: 'Raleway', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif; /* Define the title font family with Raleway as the first choice */
+    --font-size-small: 1.2rem;            /* Define a custom small font size */
+    --font-size-medium: 1.6rem;           /* Define a custom medium font size */
+    --font-size-large: 1.8rem;            /* Define a custom large font size */
+    --font-size-x-large: 2.3rem;         /* Define a custom extra-large font size */
+    --font-size-xx-large: 4.8rem;        /* Define a custom extra-extra-large font size */
+    --font-weight-regular: 400;          /* Define font weight for regular text */
+    --font-weight-bold: 700;             /* Define font weight for bold text */
+}
+  
+  /* Apply smooth scrolling behavior to the HTML element */
+  html {
+    scroll-behavior: smooth; /* Enable smooth scrolling behavior */
+    font-size: 62.5%; /* Set the base font size to make rem units more predictable (optional) */
+  }
+  
+  /* Apply text color, base font family, and font size to the entire body */
+  body {
+    color: var(--text-color);           /* Set the foreground color of the body to var(--text-color) */
+    font-family: var(--font-family-base); /* Apply the base font family to the body text */
+    font-size: var(--font-size-medium);  /* Set the font size to font-size-medium */
+    font-weight: var(--font-weight-regular); /* Set the font weight to font-weight-regular */
+  }
+  
+  /* Apply text color to all anchor (link) elements */
+  a {
+    color: var(--text-color);
+  }
+  
+  /* Hide elements with the class visually-hidden by setting their display property to none */
+  .visually-hidden {
+    display: none;
+  }
+  
+  /* Apply the primary color to elements with the class card-category */
+  .card-category {
+    color: var(--color-primary);
+  }
+  
+  /* Apply the primary color to elements with the class section-tagline */
+  .section-tagline {
+    color: var(--color-primary);
+  }
+  
+  /* Apply the title font family to headings (h1, h2, h3, h4, h5, h6) */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-family-title);
+    font-weight: var(--font-weight-bold); /* Set the font weight to font-weight-bold */
+  }
+  
