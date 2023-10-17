@@ -15,7 +15,8 @@
 }
 
 html {
-  font-size: 62.5%; /* Set the root font size to 62.5% of the default size (10px) */
+	scroll-behavior: smooth;
+	font-size: 62.5%;
 }
 
 body {
