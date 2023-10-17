@@ -54,6 +54,6 @@
   /* Apply the title font family to headings (h1, h2, h3, h4, h5, h6) */
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-family-title);
-    font-weight: var(--font-bold-weight); /* Set the font weight to font-weight-bold */
+    font-weight: var(--font-weight-bold); /* Set the font weight to font-weight-bold */
   }
   
