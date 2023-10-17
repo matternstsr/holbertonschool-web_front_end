@@ -1,0 +1,225 @@
+/* Define custom CSS variables (often used for theming) */
+:root {
+    /* Color variables */
+    --color-primary: #d73953; /* Primary color for the theme */
+    --color-black: #090909; /* Black color */
+    --color-white: #ffffff; /* White color */
+    --color-light-grey: #f3f3f3; /* Light grey color */
+    --color-dark-grey: #353535; /* Dark grey color */
+    --text-color: var(--color-black); /* Default text color */
+  
+    /* Font variables */
+    --font-family-base: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; /* Base font family */
+    --font-family-title: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif; /* Font family for titles */
+    --font-size-small: 1.2rem; /* Small font size */
+    --font-size-medium: 1.6rem; /* Medium font size */
+    --font-size-large: 1.8rem; /* Large font size */
+    --font-size-x-large: 2.3rem; /* Extra-large font size */
+    --font-size-xx-large: 4.8rem; /* Double extra-large font size */
+    --font-weight-regular: 400; /* Regular font weight */
+    --font-weight-bold: 700; /* Bold font weight */
+  
+    /* Line height variables */
+    --line-height-small: 1.2; /* Small line height */
+    --line-height-base: 1.5; /* Base line height */
+    --line-height-big: 1.8; /* Larger line height */
+  
+    /* Section-specific variables */
+    --section-header-align: center; /* Center align section headers */
+    --section-tagline-transform: uppercase; /* Uppercase transform for section taglines */
+    --section-title-margin: 0; /* No margin for section titles */
+    --section-title-color: var(--color-black); /* Default color for section titles */
+    --section-padding: 5rem 0; /* Padding for sections */
+    --section-header-padding: 0 0 3rem; /* Padding for section headers */
+    --section-body-padding: 0 0 3rem; /* Padding for section bodies */
+    --section-footer-padding: 3rem 0 0; /* Padding for section footers */
+    --section-footer-align: center; /* Center align section footers */
+  
+    /* Footer and navigation variables */
+    --footer-padding: 5rem 0 1rem; /* Padding for the footer */
+    --nav-item-font-family: var(--font-family-title); /* Font family for navigation items */
+    --nav-item-font-weight: var(--font-weight-bold); /* Font weight for navigation items */
+    --nav-item-font-size: var(--font-size-medium); /* Font size for navigation items */
+    --nav-item-letter-spacing: 0.04rem; /* Letter spacing for navigation items */
+    --nav-item-display: inline-block; /* Display navigation items inline */
+    --nav-item-margin: 0 0 3rem 0; /* Margin for navigation items */
+    --nav-item-link-hover: var(--color-primary); /* Hover color for navigation links */
+    --section-tagline-margin: 0; /* No margin for section taglines */
+  }
+  
+  /* Apply box-sizing: border-box to all elements */
+  *,
+  *:before,
+  *:after {
+    box-sizing: border-box;
+  }
+  
+  /* Adjust the base font size and enable smooth scrolling for the page */
+  html {
+    scroll-behavior: smooth; /* Enable smooth scrolling for anchor links */
+    font-size: 62.5%; /* Set the base font size to 62.5% (10px) for easier rem unit calculations */
+  }
+  
+  /* Define global styles for the body element */
+  body {
+    color: var(--text-color); /* Set the text color to the defined variable */
+    font-family: var(--font-family-base); /* Use the base font family */
+    font-size: var(--font-size-medium); /* Use the medium font size */
+    font-weight: var(--font-weight-regular); /* Use regular font weight */
+    line-height: var(--line-height-base); /* Use the base line height */
+  }
+  
+  /* Styles for the navigation menu and items */
+  .navbar-menu {
+    float: right; /* Float the navbar menu to the right */
+  }
+  
+  .nav {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-align: center; /* Center-align navigation list */
+  }
+  
+  .nav .nav-item {
+    font-family: var(--nav-item-font-family); /* Use the defined font family */
+    font-weight: var(--nav-item-font-weight); /* Use the defined font weight */
+    font-size: var(--nav-item-font-size); /* Use the defined font size */
+    letter-spacing: var(--nav-item-letter-spacing); /* Use the defined letter spacing */
+    display: var(--nav-item-display); /* Use the defined display property */
+    margin: var(--nav-item-margin); /* Use the defined margin */
+  }
+  
+  /* Styles for navigation links and their hover effect */
+  .nav .nav-link {
+    display: block;
+    padding: 0.5rem 1rem; /* Add padding to navigation links */
+  }
+  
+  .nav .nav-link:hover {
+    color: var(--nav-item-link-hover); /* Change the text color on hover */
+  }
+  
+  /* Define fonts and styles for heading elements */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-family-title); /* Use the title font family for headings */
+    font-weight: var(--font-weight-bold); /* Use bold font weight for headings */
+  }
+  
+  /* Styles for links */
+  a:link {
+    color: var(--text-color); /* Set link color to the defined text color */
+    text-decoration: none; /* Remove link underlines */
+  }
+  
+  a:visited {
+    font-style: italic; /* Make visited links italic */
+  }
+  
+  a:hover {
+    text-decoration: underline; /* Underline links on hover */
+  }
+  
+  a:active {
+    background-color: var(--color-light-grey); /* Change background color on link click */
+  }
+  
+  /* A class to visually hide an element */
+  .visually-hidden {
+    display: none; /* Hide elements with this class */
+  }
+  
+  /* Styles for elements with the "card-category" class */
+  .card-category {
+    color: var(--color-primary); /* Set text color for elements with this class */
+  }
+  
+  /* Styles for sections, headers, bodies, and footers */
+  .section {
+    padding: var(--section-padding); /* Apply padding to sections */
+  }
+  
+  .section-header {
+    text-align: var(--section-header-align); /* Align section headers according to the defined variable */
+    padding: var(--section-header-padding); /* Apply padding to section headers */
+  }
+  
+  .section-body {
+    padding: var(--section-body-padding); /* Apply padding to section bodies */
+  }
+  
+  .section-footer {
+    padding: var(--section-footer-padding); /* Apply padding to section footers */
+    text-align: var(--section-footer-align); /* Align section footers according to the defined variable */
+  }
+  
+  /* Styles for section titles and taglines */
+  .section-title {
+    font-family: var(--font-family-title); /* Use the title font family for section titles */
+    font-size: var(--font-size-xx-large); /* Use the double extra-large font size for section titles */
+    font-weight: var(--font-weight-bold); /* Use bold font weight for section titles */
+    margin: var(--section-title-margin); /* Apply margin to section titles */
+    color: var(--section-title-color); /* Set the text color for section titles */
+  }
+  
+  .section-tagline {
+    color: var(--color-primary); /* Set text color for section taglines */
+    font-family: var(--font-family-title); /* Use the title font family for section taglines */
+    text-transform: var(--section-tagline-transform); /* Apply text transformation to section taglines */
+    font-weight: var(--font-weight-bold); /* Use bold font weight for section taglines */
+    margin: var(--section-tagline-margin); /* Apply margin to section taglines */
+  }
+  
+  /* Styles for a list with the class "row" */
+  ul.row {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  /* Create a new row after each instance of the class "row" */
+  .row::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Styles for column layouts */
+  .col-1-3 {
+    width: 33.33%; /* Set the width for a one-third column */
+    float: left; /* Float the column to the left */
+    padding: 0.5rem; /* Apply padding to the column */
+  }
+  
+  .col-1-2 {
+    width: 50%; /* Set the width for a half-width column */
+    float: left; /* Float the column to the left */
+    padding: 0.5rem; /* Apply padding to the column */
+  }
+  
+  /* Styles for the main container */
+  .container {
+    width: 960px; /* Set the container width */
+    margin-left: auto; /* Center-align the container horizontally */
+    margin-right: auto; /* Center-align the container horizontally */
+  }
+  
+  /* Styles for the footer and its copyright notice */
+  .footer {
+    padding: var(--footer-padding); /* Apply padding to the footer */
+  }
+  
+  .footer-copyright {
+    margin: 0; /* No margin for the copyright notice */
+    font-size: var(--font-size-small); /* Use the small font size for the copyright notice */
+    color: var(--text-color); /* Set the text color for the copyright notice */
+  }
+  
+  .footer ul {
+    text-align: right; /* Right-align the unordered list in the footer */
+  }
