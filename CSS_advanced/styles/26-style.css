@@ -1,0 +1,177 @@
+/* Define custom CSS variables (often used for theming) */
+:root {
+    /* Color variables */
+    --color-primary: #d73953; /* Primary color for the theme */
+    --color-black: #090909; /* Black color */
+    --color-white: #ffffff; /* White color */
+    --color-light-grey: #f3f3f3; /* Light grey color */
+    --color-dark-grey: #353535; /* Dark grey color */
+    --text-color: var(--color-black); /* Default text color */
+
+    /* Font variables */
+    --font-family-base: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; /* Base font family */
+    --font-family-title: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif; /* Font family for titles */
+    --font-size-small: 1.2rem; /* Small font size */
+    --font-size-medium: 1.6rem; /* Medium font size */
+    --font-size-large: 1.8rem; /* Large font size */
+    --font-size-x-large: 2.3rem; /* Extra-large font size */
+    --font-size-xx-large: 4.8rem; /* Double extra-large font size */
+    --font-weight-regular: 400; /* Regular font weight */
+    --font-weight-bold: 700; /* Bold font weight */
+
+    /* Line height variables */
+    --line-height-small: 1.2; /* Small line height */
+    --line-height-base: 1.5; /* Base line height */
+    --line-height-big: 1.8; /* Larger line height */
+
+    /* Section-specific variables */
+    --section-header-align: center; /* Center align section headers */
+    --section-tagline-transform: uppercase; /* Uppercase transform for section taglines */
+    --section-title-margin: 0; /* No margin for section titles */
+    --section-title-color: var(--color-black); /* Default color for section titles */
+    --section-padding: 5rem 0; /* Padding for sections */
+    --section-header-padding: 0 0 3rem; /* Padding for section headers */
+    --section-body-padding: 0 0 3rem; /* Padding for section bodies */
+    --section-footer-padding: 3rem 0 0; /* Padding for section footers */
+    --section-footer-align: center; /* Center align section footers */
+
+    /* Footer and navigation variables */
+    --footer-padding: 5rem 0 1rem; /* Padding for the footer */
+    --nav-item-font-family: var(--font-family-title); /* Font family for navigation items */
+    --nav-item-font-weight: var(--font-weight-bold); /* Font weight for navigation items */
+    --nav-item-font-size: var(--font-size-medium); /* Font size for navigation items */
+    --nav-item-letter-spacing: 0.04rem; /* Letter spacing for navigation items */
+    --nav-item-display: inline-block; /* Display navigation items inline */
+    --nav-item-margin: 0 0 3rem 0; /* Margin for navigation items */
+    --nav-item-link-hover: var(--color-primary); /* Hover color for navigation links */
+    --section-tagline-margin: 0; /* No margin for section taglines */
+
+    /* Custom button properties */
+    --button-display: inline-block;
+    --button-padding: 1.5rem 3rem;
+    --button-border: 0.2rem solid var(--color-primary);
+    --button-color: var(--color-black);
+    --button-text-decoration: none;
+    --button-font-size: var(--font-size-large);
+    --button-hover-color: var(--color-white);
+    --button-hover-text-decoration: none;
+    --button-hover-background: var(--color-primary);
+}
+
+/* Styles for the "data-section-theme" attribute set to "dark" */
+[data-section-theme="dark"] {
+    /* Redefine custom properties for dark theme */
+    --text-color: var(--color-white);
+    --section-title-color: var(--color-white);
+    background: var(--color-black);
+
+    /* Update button properties for dark theme */
+    --button-color: var(--color-white);
+}
+
+/* Apply box-sizing: border-box to all elements */
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+/* Adjust the base font size and enable smooth scrolling for the page */
+html {
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+}
+
+/* Define global styles for the body element */
+body {
+    color: var(--text-color);
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-medium);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-base);
+}
+
+/* Styles for the footer and its copyright notice */
+.footer {
+    padding: var(--footer-padding);
+}
+
+.footer-copyright {
+    margin: 0;
+    font-size: var(--font-size-small);
+    color: var(--text-color);
+}
+
+.footer ul {
+    text-align: right;
+}
+
+/* Style the footer-address class */
+.footer-address {
+    color: var(--text-color);
+}
+
+/* Style the social-link class */
+.social-link {
+    display: block;
+}
+
+/* Style the social-link class that also selects the svg children */
+.social-link svg {
+    fill: var(--text-color);
+}
+
+/* Target card-title inside card-services and remove all margins */
+.card-services .card-title {
+    margin: 0; /* No margins on all sides */
+}
+
+/* Target a inside card-services and make it a block-level element with padding */
+.card-services a {
+    display: block; /* Render as a block-level element */
+    padding: 2rem; /* Set padding to 2 times the root element */
+    background-color: var(--color-light-grey); /* Set the background color to the variable color-light-grey */
+}
+
+/* Target the hover state of a inside card-services */
+.card-services a:hover {
+    color: var(--color-white); /* Set the foreground color to the variable color-white */
+    background-color: var(--color-primary); /* Set the background color to the variable color-primary */
+    text-decoration: none; /* Remove text decoration */
+}
+
+/* Add the card-testimonial selector */
+.card-testimonial {
+    text-align: center; /* Center align the text */
+
+    /* Target the card-avatar that is inside the card-testimonial */
+    .card-avatar {
+        border-radius: 50%; /* Round the radius on all sides at 50% */
+        width: 10rem; /* Set the width to 10 times the root element */
+        height: 10rem; /* Set the height to 10 times the root element */
+    }
+
+    /* Target the <cite> HTML tag which is inside card-quote inside the card-testimonial */
+    .card-quote cite {
+        display: block; /* Style as a block-level element */
+        padding-top: 1rem; /* Pad the top with 1 times the root element */
+        color: var(--color-primary); /* Set the foreground color value to the value of the color-primary variable */
+    }
+}
+
+/* Create the button class selector */
+.button {
+    display: var(--button-display);
+    padding: var(--button-padding);
+    border: var(--button-border);
+    font-size: var(--button-font-size);
+    color: var(--button-color);
+    text-decoration: var(--button-text-decoration);
+}
+
+/* Create the hover state of the button class selector */
+.button:hover {
+    color: var(--button-hover-color);
+    text-decoration: var(--button-hover-text-decoration);
+    background: var(--button-hover-background);
+}
