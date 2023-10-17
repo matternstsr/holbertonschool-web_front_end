@@ -1,6 +1,8 @@
+/* styles/17-style.css */
+
 /* Targeting the navbar-menu class, let it float to the right */
 .navbar-menu {
-    float: right; /* Float the navbar-menu to the right */
+    float: right;
   }
   
   /* For the nav class */
@@ -24,8 +26,7 @@
   /* For the nav-link class in nav class */
   .nav .nav-item .nav-link {
     display: block; /* Set display to block */
-    padding: var(--nav-link-padding); /* Set padding using custom property */
-    color: var(--nav-link-color); /* Set text color using custom property */
+    padding: calc(0.5 * var(--root-element)) var(--root-element); /* Set padding using custom property */
   }
   
   /* While hovering over the nav-link class in nav class */
@@ -33,17 +34,14 @@
     color: var(--nav-item-link-hover); /* Change text color on hover using custom property */
   }
   
-  /* Create custom properties at the :root level */
+  /* Define custom properties */
   :root {
     --nav-item-font-family: font-family-title; /* Set custom font family property */
     --nav-item-font-weight: font-weight-bold; /* Set custom font weight property */
     --nav-item-font-size: font-size-medium; /* Set custom font size property */
-    --nav-item-letter-spacing: 4%; /* Set custom letter spacing property */
-  
+    --nav-item-letter-spacing: calc(4% * var(--root-element)); /* Set custom letter spacing property */
     --nav-item-display: inline-block; /* Set custom display property */
     --nav-item-margin: 0 0 calc(3 * var(--root-element)) 0; /* Set custom margin property */
-    --nav-link-padding: calc(0.5 * var(--root-element)) var(--root-element); /* Set custom padding property */
-    --nav-link-color: color-primary; /* Set custom text color property */
     --nav-item-link-hover: color-primary; /* Set custom hover text color property */
   }
   
