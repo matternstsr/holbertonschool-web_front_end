@@ -1,40 +1,47 @@
+/* Define custom CSS variables for color and text properties */
 :root {
-  --color-primary: #d73953;
-  --color-black: #090909;
-  --color-white: #ffffff;
-  --color-light-grey: #f3f3f3;
-  --color-dark-grey: #353535;
-  --text-color: var(--color-black);
-  --font-family-base: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
-  --font-family-title: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  --color-primary: #d73953;          /* Define a custom primary color */
+  --color-black: #090909;            /* Define a custom black color */
+  --color-white: #ffffff;            /* Define a custom white color */
+  --color-light-grey: #f3f3f3;       /* Define a custom light grey color */
+  --color-dark-grey: #353535;        /* Define a custom dark grey color */
+  --text-color: var(--color-black);  /* Define the text color and initialize it with the black color */
+  --font-family-base: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif; /* Define the base font family */
+  --font-family-title: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif; /* Define the title font family */
 }
 
+/* Apply text color and base font family to the entire body */
 body {
-  color: var(--text-color);
-  font-family: var(--font-family-base);
+  color: var(--text-color);         /* Set the foreground color of the body to var(--text-color) */
+  font-family: var(--font-family-base); /* Apply the base font family to the body text */
 }
 
+/* Apply text color to all anchor (link) elements */
 a {
-  color: var(--text-color);
+  color: var(--text-color); /* Set the foreground color of all anchor elements to var(--text-color) */
 }
 
+/* Hide elements with the class visually-hidden by setting their display property to none */
 .visually-hidden {
-  display: none;
+  display: none; /* Set the display property of elements with the class visually-hidden to none */
 }
 
+/* Apply the primary color to elements with the class card-category */
 .card-category {
-  color: var(--color-primary);
+  color: var(--color-primary); /* Set the foreground color of elements with the class card-category to var(--color-primary) */
 }
 
+/* Apply the primary color to elements with the class section-tagline */
 .section-tagline {
-  color: var(--color-primary);
+  color: var(--color-primary); /* Set the foreground color of elements with the class section-tagline to var(--color-primary) */
 }
 
+/* Apply the title font family to headings (h1, h2, h3, h4, h5, h6) */
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-family: var(--font-family-title);
+  font-family: var(--font-family-title); /* Apply the title font family to all headings */
 }
