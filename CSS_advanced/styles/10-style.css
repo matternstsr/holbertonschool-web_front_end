@@ -1,0 +1,36 @@
+/* Create a new custom property section-header-align and set it to center */
+:root {
+    --section-header-align: center;
+}
+
+/* Apply the section-header-align property to elements with the class section-header */
+.section-header {
+    text-align: var(--section-header-align);
+}
+
+/* Remove text decorations from anchor elements */
+a {
+    color: var(--text-color); /* Set the text color */
+    text-decoration: none;    /* Remove underlines and other decorations */
+}
+
+/* Hide elements with the class visually-hidden by setting their display property to none */
+.visually-hidden {
+    display: none;
+}
+
+/* Apply the primary color to elements with the class card-category */
+.card-category {
+    color: var(--color-primary);
+}
+
+/* Apply the primary color to elements with the class section-tagline */
+.section-tagline {
+    color: var(--color-primary);
+}
+
+/* Apply the title font family to headings (h1, h2, h3, h4, h5, h6) */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-family-title);
+    font-weight: var(--font-weight-bold); /* Set the font weight to font-weight-bold */
+}
